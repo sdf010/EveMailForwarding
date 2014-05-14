@@ -13,6 +13,7 @@ info = dict()
 with open("config.cfg") as f:
     lines = f.readlines()
 for line in lines:
+    line = line.strip()
     pLine = line.replace("\n", "")
     tList = pLine.split("=")
     info[tList[0]] = tList[1]
